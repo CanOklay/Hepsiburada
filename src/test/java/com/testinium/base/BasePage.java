@@ -148,5 +148,8 @@ public class BasePage {
     public SearchPage callSearchPage() {
         return new SearchPage(driver);
     }
-    
+
+    public void asdf() {
+        
+    }
 }
