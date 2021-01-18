@@ -1,9 +1,6 @@
 package com.testinium.base;
 
-import com.testinium.page.LoginPage;
-import com.testinium.page.MainPage;
-import com.testinium.page.ProductListPage;
-import com.testinium.page.SearchPage;
+import com.testinium.page.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
@@ -152,5 +149,9 @@ public class BasePage {
 
     public ProductListPage callProductListPage() {
         return new ProductListPage(driver);
+    }
+
+    public ProductPage callProductPage() {
+        return new ProductPage(driver);
     }
 }

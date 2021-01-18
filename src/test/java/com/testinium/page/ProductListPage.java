@@ -1,5 +1,5 @@
 package com.testinium.page;
-import static com.testinium.constants.ConstantsProductPage.*;
+import static com.testinium.constants.ConstantsProductListPage.*;
 import com.testinium.base.BasePage;
 import org.openqa.selenium.WebDriver;
 
