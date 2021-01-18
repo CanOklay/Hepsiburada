@@ -6,4 +6,5 @@ public class ConstantsMainPage {
 
     public static final By LOGINLIST = By.id("myAccount");
     public static final By LOGIN = By.cssSelector("#login");
+    public static final By MAIN = By.cssSelector("a[title='Hepsiburada']");
 }

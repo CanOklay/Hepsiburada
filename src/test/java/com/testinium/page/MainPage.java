@@ -18,4 +18,11 @@ public class MainPage extends BasePage {
         waitSeconds(5);
         return new MainPage(driver);
     }
+
+    public MainPage getMainPage() {
+        clickElement(MAIN);
+        String hepsiburadaText = driver.getTitle();
+        assertionTrue(hepsiburadaText, true);
+        return new MainPage(driver);
+    }
 }

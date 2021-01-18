@@ -154,4 +154,8 @@ public class BasePage {
     public ProductPage callProductPage() {
         return new ProductPage(driver);
     }
+
+    public ShoppingCartPage callShoppingCartPage() {
+        return new ShoppingCartPage(driver);
+    }
 }
