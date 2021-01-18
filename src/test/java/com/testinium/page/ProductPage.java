@@ -14,6 +14,8 @@ public class ProductPage extends BasePage {
     public ProductPage addToCart() {
         clickElement(ADDTOCART);
         waitSeconds(2);
+        clickElement(SHOPPINGCART);
+        waitSeconds(3);
         return new ProductPage(driver);
     }
 }
