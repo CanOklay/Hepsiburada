@@ -1,6 +1,8 @@
 package com.testinium.page;
 import com.testinium.base.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import static com.testinium.constants.ConstantsLoginPage.*;
 
 public class LoginPage extends BasePage {
@@ -15,5 +17,7 @@ public class LoginPage extends BasePage {
         clickElement(SIGNINBUTTON);
         waitSeconds(3);
         return new LoginPage(driver);
+
+        //Sıkı çalış kardeşim yakında Berlin'deyiz.
     }
 }

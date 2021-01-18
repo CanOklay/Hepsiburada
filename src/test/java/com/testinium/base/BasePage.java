@@ -2,6 +2,7 @@ package com.testinium.base;
 
 import com.testinium.page.LoginPage;
 import com.testinium.page.MainPage;
+import com.testinium.page.ProductListPage;
 import com.testinium.page.SearchPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -149,7 +150,7 @@ public class BasePage {
         return new SearchPage(driver);
     }
 
-    public void asdf() {
-        
+    public ProductListPage callProductListPage() {
+        return new ProductListPage(driver);
     }
 }
