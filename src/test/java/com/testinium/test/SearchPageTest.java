@@ -4,6 +4,8 @@ import com.testinium.page.SearchPage;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class SearchPageTest extends BaseTest {
 
     SearchPage searchPage;
@@ -14,7 +16,7 @@ public class SearchPageTest extends BaseTest {
     }
 
     @Test
-    public void test() {
+    public void test() throws IOException {
         searchPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().searchText();
     }
 }

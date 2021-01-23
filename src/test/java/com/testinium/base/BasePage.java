@@ -3,6 +3,9 @@ package com.testinium.base;
 import com.testinium.page.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -125,6 +128,16 @@ public class BasePage {
         WebDriverWait dissapear = new WebDriverWait(driver, 300);
         dissapear.ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         dissapear.until(ExpectedConditions.invisibilityOfElementLocated(by));
+    }
+
+    public void takeScreenshot(String pictureName) throws IOException {
+        String fileName = "images/"+(pictureName)+".png";
+        File destFile = new File("reports/"+fileName);
+        if(destFile.exists()) {
+            destFile.delete();
+        }
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, destFile);
     }
 
     public WebDriver getDriver() {

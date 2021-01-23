@@ -5,6 +5,8 @@ import com.testinium.page.LoginPage;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class LoginPageTest extends BaseTest {
 
     LoginPage loginPage;
@@ -15,7 +17,7 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test
-    public void test() {
+    public void test() throws IOException {
         loginPage.callMainPage().pickLogin().callLoginPage().login();
     }
 }

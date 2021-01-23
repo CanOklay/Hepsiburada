@@ -5,6 +5,8 @@ import com.testinium.page.ProductPage;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class ProductPageTest extends BaseTest {
 
     ProductPage productPage;
@@ -15,7 +17,7 @@ public class ProductPageTest extends BaseTest {
     }
 
     @Test
-    public void test() {
+    public void test() throws IOException {
         productPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().
                 searchText().callProductListPage().pickProduct().callProductPage().addToCart();
     }
