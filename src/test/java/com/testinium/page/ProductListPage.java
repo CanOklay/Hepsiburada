@@ -16,4 +16,11 @@ public class ProductListPage extends BasePage {
         waitSeconds(2);
         return new ProductListPage(driver);
     }
+
+    public ProductListPage pickPc() throws IOException {
+        takeScreenshot("productPc");
+        clickElement(PRODUCT2);
+        waitSeconds(2);
+        return new ProductListPage(driver);
+    }
 }

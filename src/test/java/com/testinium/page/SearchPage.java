@@ -20,4 +20,13 @@ public class SearchPage extends BasePage {
         waitSeconds(2);
         return new SearchPage(driver);
     }
+
+    public SearchPage searchPc() throws IOException {
+        sendKeys(SEARCHBOX, "Bilgisayar");
+        takeScreenshot("searchPc");
+        waitSeconds(2);
+        clickElement(SEARCH);
+        waitSeconds(2);
+        return new SearchPage(driver);
+    }
 }

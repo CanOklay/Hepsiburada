@@ -19,4 +19,9 @@ public class SearchPageTest extends BaseTest {
     public void test() throws IOException {
         searchPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().searchText();
     }
+
+    @Test
+    public void testPc() throws IOException {
+        searchPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().searchPc();
+    }
 }
