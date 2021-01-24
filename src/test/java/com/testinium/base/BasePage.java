@@ -140,6 +140,15 @@ public class BasePage {
         FileUtils.copyFile(scrFile, destFile);
     }
 
+    public void addToCartPopupClose(By by, By by2) {
+        WebElement element = findElement(by);
+        WebElement element2 = findElement(by2);
+        if(element.isDisplayed()) {
+            waitUntilElementClickable(by2);
+             element2.click();
+        }
+    }
+
     public WebDriver getDriver() {
         return driver;
     }

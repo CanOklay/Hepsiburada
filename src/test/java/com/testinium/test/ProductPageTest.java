@@ -21,4 +21,10 @@ public class ProductPageTest extends BaseTest {
         productPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().
                 searchText().callProductListPage().pickProduct().callProductPage().addToCart();
     }
+
+    @Test
+    public void test2() throws IOException {
+        productPage.callMainPage().pickLogin().callLoginPage().login().callSearchPage().
+                searchPc().callProductListPage().pickPc().callProductPage().addToCart();
+    }
 }

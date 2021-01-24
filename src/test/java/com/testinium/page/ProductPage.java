@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 
 import static com.testinium.constants.ConstantsProductPage.*;
+import static com.testinium.constants.ConstantsPopup.*;
 
 public class ProductPage extends BasePage {
 
@@ -16,6 +17,8 @@ public class ProductPage extends BasePage {
         clickElement(ADDTOCART);
         waitSeconds(2);
         takeScreenshot("addToCart");
+        addToCartPopupClose(POPUP, POPUPCLOSE);
+        waitSeconds(2);
         clickElement(SHOPPINGCART);
         waitSeconds(3);
         return new ProductPage(driver);
