@@ -15,7 +15,7 @@ public class ShoppingCartPage extends BasePage {
         hoverElement(DELETEPRODUCT);
         waitSeconds(2);
         clickElement(DELETEPRODUCT);
-        takeScreenshot("deleteCart");
+        takeScreenshot("emptyCart");
         waitSeconds(2);
         return new ShoppingCartPage(driver);
     }
